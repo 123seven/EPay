@@ -14,6 +14,7 @@ const Dashboard = lazy(() => import('./pages/dashboard'))
 const Order = lazy(() => import('./pages/order'))
 const Admin = lazy(() => import('./pages/admin'))
 const Settings = lazy(() => import('./pages/settings'))
+const Login = lazy(() => import('./pages/login'))
 
 import Loyout from './layouts/index'
 
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
         element: lazyLoad(<Settings />),
       },
     ],
+  },
+  {
+    path: '/login',
+    element: lazyLoad(<Login />),
   },
 ])
 
